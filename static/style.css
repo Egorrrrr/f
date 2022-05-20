@@ -1,0 +1,32 @@
+*{
+    margin: 0;
+}
+body{
+    width: 100vh;
+    height: 100vh;
+}
+.frm{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+
+}
+
+select{
+width: 200px;
+height: 300px;
+}
+.tables{
+    display: flex;
+    flex-direction: row;
+}
+
+.table{
+    display: flex;
+    flex-direction: column;
+}
+
+.opts{
+    display: flex;
+    flex-direction: row;
+}

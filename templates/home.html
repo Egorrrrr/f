@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+
+{% block title %}
+<button onclick="out()"><a href="/">Выход</a></button>
+{% endblock %}
+
+{% block content %}
+<h1>{{message}}</h1>
+<div class="menu">
+
+    <div class="tables">
+        <div class="table">
+            <select name="Users" size="5">
+                {% for i in users %}
+                <option onclick="loadPosts(this.value)" value="{{i.email}}"> {{i.email}} </option>
+                {% endfor %}
+            </select>
+            <div class="opts">
+                <button>+</button>
+                <button>-</button>
+                <button>...</button>
+            </div>
+        </div>
+        <div class="table">
+            <select name="Users" size="5" id="posts">
+              
+            </select>
+            <div class="opts">
+                <button onclick="addP()">+</button>
+                <button onclick="delP()">-</button>
+                <button onclick="editP()">...</button>
+            </div>
+        </div>
+        <div class="table">
+            <select id="fol" size="5">
+               
+            </select>
+            <div class="opts">
+                <button onclick="addF()">+</button>
+                <button onclick="delF()">-</button>
+                <button>...</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

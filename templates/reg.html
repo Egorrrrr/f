@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+
+    {% block title %}
+    <button><a href="/login">Вход</a></button>
+    {% endblock %}
+    <main>
+    {% block content %}
+    <form  autocomplete="false" action="" onsubmit="sub(event)" class="frm" id="frm">
+        <label for="name">Имя</label>
+        <input type="text" name="name" id="name" required="true" role="presentation" autocomplete="off">
+    
+        <label for="email">E-mail</label>
+        <input type="email" name="email" id="email" required="true" role="presentation" autocomplete="off">
+
+    
+    <label for="password">Пароль</label>
+    <input type="password" name="password" id="password" required="true" role="presentation" autocomplete="off">
+
+    
+    <label for="confirm">Введите еще раз</label>
+    <input type="password" name="confirm" id="confirm" required="true" role="presentation" autocomplete="off">
+    <br>
+</div>
+<div>
+</div>
+<br>
+<div>
+    <label for="accept">Запомнить меня</label>
+    <input type="checkbox" name="accept" id="accept" form="frm" role="presentation" autocomplete="off">
+</div>
+<button type="submit" form="frm" value="Отправить">Отправить</button>
+</form>
+<button id="theme" onclick="theme(false)">Темная тема</button>
+    {% endblock %}
+
+

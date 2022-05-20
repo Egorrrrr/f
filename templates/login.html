@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block title %}
+<button><a href="/">Регистрация</a></button>
+{% endblock %}
+
+{% block content %}
+<form action="" onsubmit="log(event)" class="frm" id="frm2">
+
+    <label for="login">Email</label>
+    <input type="text" name="login" id="login" role="presentation" autocomplete="off">
+
+    <label for="password">Пароль</label>
+    <input type="password" name="password" id="password" role="presentation" autocomplete="off">
+    <div>
+        <label for="accept">Запомнить меня</label>
+        <input type="checkbox" name="accept" id="accept" form="frm2" role="presentation" autocomplete="off" checked="false">
+    </div>
+    <button type="submit" form="frm2" value="Вход">Вход</button>
+    
+</form>
+<button id="theme" onclick="theme(false)">Темная тема</button>
+{% endblock %}
